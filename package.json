@@ -1,0 +1,41 @@
+{
+    "name": "vapper-vue-cli-examples",
+    "version": "0.1.0",
+    "private": true,
+    "scripts": {
+        "dev": "vapper dev",
+        "build": "vapper build",
+        "start": "vapper start"
+    },
+    "dependencies": {
+        "@vapper/core": "^1.11.2",
+        "axios": "^0.21.1",
+        "core-js": "^3.3.2",
+        "cssnano": "^4.1.10",
+        "cssnano-preset-advanced": "^4.0.7",
+        "echarts": "^5.0.2",
+        "element": "^0.1.4",
+        "element-ui": "^2.15.1",
+        "postcss-aspect-ratio-mini": "^1.1.0",
+        "postcss-cssnext": "^3.1.0",
+        "postcss-px-to-viewport": "^1.1.1",
+        "postcss-viewport-units": "^0.1.6",
+        "postcss-write-svg": "^3.0.1",
+        "v-viewer": "^1.6.4",
+        "vue": "^2.6.10",
+        "vue-aplayer": "^1.6.1",
+        "vue-axios": "^3.2.4",
+        "vue-echarts": "^6.0.0-rc.4",
+        "vue-router": "^3.5.1",
+        "vue-video-player": "^5.0.2",
+        "vuedraggable": "^2.24.3",
+        "yarn": "^1.22.10"
+    },
+    "devDependencies": {
+        "@vue/cli-plugin-babel": "^4.0.0",
+        "@vue/cli-service": "^4.0.0",
+        "less": "^3.9.0",
+        "less-loader": "^5.0.0",
+        "vue-template-compiler": "^2.6.10"
+    }
+}

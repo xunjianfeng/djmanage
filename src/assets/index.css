@@ -1,0 +1,260 @@
+.el-date-picker.has-sidebar.has-time {
+    /* background: #0a5857d6; */
+	background: #33384B;
+    color: #fff;
+    /* border: 1px solid #22f4d6 */
+	border: 1px solid #33384B;
+	/* border: 1px solid rgba(255,255,255,0.2); */
+}
+.el-date-picker__header-label {
+    color: #ffffff;
+}
+.el-date-table th {
+    color: #fff;
+}
+.el-icon-d-arrow-left:before {
+    color: #fff;
+}
+.el-icon-arrow-left:before {
+    color: #fff;
+}
+.el-icon-arrow-right:before {
+    color: #fff;
+}
+.el-icon-d-arrow-right:before {
+    color: #fff;
+}
+.el-picker-panel__footer {
+    /* background-color: #0a5857d6; */
+    /* border: 1px solid #22f4d6 */
+	background-color: #33384B;
+	/* border: 1px solid #33384B */
+	border: 1px solid rgba(255,255,255,0.2);
+}
+.el-picker-panel [slot=sidebar], .el-picker-panel__sidebar {
+    /* background-color: #0a5857d6; */
+	background-color: #33384B;
+    /* border-right: 1px solid #33384B; */
+	border-right: 1px solid rgba(255,255,255,0.2);
+}
+.el-picker-panel__shortcut {
+    color: #fff;
+}
+.el-date-picker__time-header {
+    /* border-bottom: 1px solid #33384B; */
+	border-bottom: 1px solid rgba(255,255,255,0.2);
+}
+.el-popper[x-placement^=bottom] .popper__arrow::after {
+    top: 1px;
+    margin-left: -6px;
+    border-top-width: 0;
+    /* border-bottom-color: #0a5857d6; */
+	border-bottom-color: #33384B;
+}
+.el-popper[x-placement^=top] .popper__arrow::after {
+    bottom: 1px;
+    margin-left: -6px;
+    border-top-color: #33384B;
+    border-bottom-width: 0;
+}
+.el-picker-panel {
+    /* background: #0a5857d6; */
+	background: #33384B;
+    color: #fff;
+}
+.el-date-table td.in-range div, .el-date-table td.in-range div:hover, .el-date-table.is-week-mode .el-date-table__row.current div, .el-date-table.is-week-mode .el-date-table__row:hover div {
+    /* background-color: #22f4d6c9; */
+	color: #fff;
+	background-color: #33384B;
+}
+.el-date-table td.disabled div{
+	background-color: #33384B;
+	color: #727272;
+}
+.el-year-table td .cell{
+	color: #FFFFFF;
+}
+
+.el-date-picker__editor-wrap .el-input .el-input__inner{
+	background-color: #33384B;
+	color: #FFFFFF;
+}
+.el-picker-panel.time-select{
+	/* background-color: #ff0; */
+}
+.time-select .el-scrollbar__view .time-select-item:hover{
+	background-color: #545873 !important;
+	color: #FFFFFF;
+}
+
+
+/* 日历样式 */
+.el-picker-panel {
+  background: #33384B !important;
+  color: #ffffff;
+  /* border: 1px solid #FFFFFF !important; */
+  border: 1px solid rgba(255,255,255,0.2) !important;
+}
+.el-picker-panel .el-date-range-picker__time-header {
+  /* border-bottom: 1px solid #FFFFFF !important; */
+  border-bottom: 1px solid rgba(255,255,255,0.2) !important;
+}
+.el-picker-panel__icon-btn {
+  color: #FFFFFF !important;
+}
+.el-picker-panel .el-input__inner {
+  background-color: #33384B;
+  /* border: 1px solid #FFFFFF; */
+  border: 1px solid rgba(255,255,255,0.2);
+  color: #FFFFFF;
+}
+.el-picker-panel .el-date-range-picker__content.is-left,
+.el-picker-panel .el-date-range-picker__content.is-right {
+  /* border-right: 1px solid #FFFFFF !important; */
+  border-right: 1px solid rgba(255,255,255,0.2) !important;
+}
+.el-picker-panel .el-date-range-picker__header {
+  color: #FFFFFF;
+}
+.el-picker-panel .el-date-table th {
+  color: #FFFFFF;
+}
+.el-picker-panel .el-date-table td.available {
+  color: #FFFFFF;
+}
+.el-picker-panel .el-date-table td.available:hover {
+  color: #ffffff;
+}
+.el-date-table td.in-range div,
+.el-date-table td.in-range div:hover,
+.el-date-table.is-week-mode .el-date-table__row.current div,
+.el-date-table.is-week-mode .el-date-table__row:hover div {
+  background-color: #33384B !important;
+}
+.el-time-panel {
+  background-color: #33384B !important;
+  /* border: 1px solid #FFFFFF !important; */
+  border: 1px solid rgba(255,255,255,0.2) !important;
+}
+.el-time-spinner__item {
+  color: #FFFFFF !important;
+}
+.el-time-spinner__item:hover:not(.disabled):not(.active) {
+  background: #33384B !important;
+}
+.el-time-panel__btn {
+  color: #FFFFFF !important;
+}
+.el-picker-panel__footer {
+  background-color: #33384B !important;
+}
+.el-picker-panel .el-button {
+  color: #409eff;
+  background-color: #33384B !important;
+  border: 1px solid rgba(255,255,255,0.2) !important;
+}
+.el-icon-d-arrow-left {
+  color: #FFFFFF !important;
+}
+.el-picker-panel__link-btn.el-button.is-disabled,
+.el-picker-panel__link-btn.el-button.is-disabled:focus,
+.el-picker-panel__link-btn.el-button.is-disabled:hover {
+  color: #FFFFFF !important;
+}
+/* .el-button + .el-button {
+  border: 1px solid #FFFFFF !important;
+  color: #409eff;
+  background-color: #0E0F11;
+} */
+/* el-button el-picker-panel__link-btn el-button--default el-button--mini is-disabled is-plain */
+.el-picker-panel__link-btn.el-button.is-disabled.is-plain, .el-picker-panel__link-btn.el-button.is-disabled.is-plain:focus, .el-picker-panel__link-btn.el-button.is-disabled.is-plain:hover{
+	background-color: #33384B;
+	color: #FFFFFF;
+}
+.el-button {
+	min-width: 60px;
+	/* color: #409eff; */
+	/* color: #FFFFFF; */
+}
+.el-button.el-button--default{
+	
+}
+.el-button.el-button--default.el-button--small{
+ color: #409EFF;
+}
+.el-button.el-button--default.el-button--small.el-button--primary {
+ color: #FFFFFF;
+}
+.el-button--text {
+  /* border: 1px solid #FFFFFF; */
+  border: 1px solid rgba(255,255,255,0.2) !important;
+}
+.el-button.is-disabled.is-plain,
+.el-button.is-disabled.is-plain:focus,
+.el-button.is-disabled.is-plain:hover {
+  /* border: 1px solid #FFFFFF !important; */
+  border: 1px solid rgba(255,255,255,0.2) !important;
+}
+.el-button--text,
+.el-button--text.is-disabled,
+.el-button--text.is-disabled:focus,
+.el-button--text.is-disabled:hover,
+.el-button--text:active {
+  /* border: 1px solid #FFFFFF; */
+  border: 1px solid rgba(255,255,255,0.2) !important;
+}
+.el-date-table th {
+  /* border-bottom: 1px solid #FFFFFF !important; */
+  border-bottom: 1px solid rgba(255,255,255,0.2) !important;
+}
+/* 时间筛选 */
+.el-time-panel__content::after,
+.el-time-panel__content::before {
+  /* border-bottom: 1px solid #FFFFFF !important; */
+  /* border-top: 1px solid #FFFFFF !important; */
+  border-bottom: 1px solid rgba(255,255,255,0.2) !important;
+  border-top: 1px solid rgba(255,255,255,0.2) !important;
+}
+.el-time-panel {
+  background-color: #33384B !important;
+}
+.el-time-panel__btn.confirm {
+  background-color: #33384B !important;
+  color: #FFFFFF !important;
+}
+.el-time-panel__btn.cancel {
+  background-color: #33384B !important;
+  color: #FFFFFF !important;
+}
+.el-time-panel__footer {
+  border-top: none !important;
+}
+.el-time-panel {
+  /* border-top: 2px solid #FFFFFF !important; */
+  border-top: 2px solid rgba(255,255,255,0.2) !important;
+}
+
+/* 提示框 */
+/deep/ .el-message-box__wrapper{
+	background-color: #33384b !important;
+}
+.el-message-box {
+    background-color: #33384b;
+    border: none;
+	border-radius: 10px;
+    /* border-radius: 0.833vw; */
+}
+.el-message-box__header .el-message-box__title{
+	color: #FFFFFF;
+}
+.el-message-box__container{
+	color: #FFFFFF !important;
+}
+.el-message-box__btns{
+	padding-bottom: 15px;
+}
+.el-message-box__input .el-input__inner{
+	background-color: #2A2E3F !important;
+	border: none;
+	color: #FFFFFF;
+}
