@@ -30,7 +30,7 @@
 								<!-- <img :src="item.teamLogo != null && item.teamLogo != ''? HOST + item.teamLogo : default_avatar" class="team_logo" /> -->
 								<el-image
 								style="width: 88px;height: 88px; border-radius: 50%;"
-								:src="HOST + item.teamLogo" 
+								:src="HOST + item.teamLogo"
 								fit="cover" class="team_logo" ></el-image>
 								<div class="team_info">
 									<el-tooltip class="item" effect="dark" :content="item.teamName" placement="bottom">
@@ -96,7 +96,7 @@
 									</div>
 								</div>
 							</div>
-										
+
 						</div>
 					</div>
 				</div>
@@ -115,7 +115,7 @@
 					<div class="predict_head">
 						<div class="predict_back" @click="go_back">
 							<span><<</span> Create Predict
-						</div> 
+						</div>
 						<div class="predict_step_center"><!-- v-if="edit_status == false" -->
 							<div :class="active == 1 || active == 2 ?'step_block':'step_ash' " @click="handleActive(1)">
 								<div class="step_num">1</div>
@@ -179,21 +179,21 @@
 									</el-select>
 								</el-form-item>
 								<div class="time_flex">
-									<el-form-item label="Start Time" :required="true"><!-- prop="startTime" --> 
+									<el-form-item label="Start Time" :required="true"><!-- prop="startTime" -->
 										<el-date-picker v-model="dataForm.startTime" @change="handleTime" :picker-options="pickerOptions0" format="yyyy-MM-dd HH:mm:ss" value-format="yyyy-MM-dd HH:mm:ss"  type="datetime" placeholder="选择日期" style="width: 360px;"></el-date-picker>
 									</el-form-item>
-									<el-form-item label="End Time" :required="true"> 
+									<el-form-item label="End Time" :required="true">
 										<el-date-picker v-model="dataForm.endTime" @change="handleEndTime" :picker-options="pickerOptions1"  format="yyyy-MM-dd HH:mm:ss" value-format="yyyy-MM-dd HH:mm:ss" type="datetime" placeholder="选择日期" style="width: 360px;">
 										</el-date-picker>
 									</el-form-item>
 								</div>
 								<div class="time_flex">
-									<el-form-item label="Registery Fee  (The coins going to collect from user per predict, its minimum value is 200 coins) " :required="true" > 
+									<el-form-item label="Registery Fee  (The coins going to collect from user per predict, its minimum value is 200 coins) " :required="true" >
 										<el-input v-model="dataForm.registrationFee"  min="200"  type="number" style="width: 360px;"></el-input>
 									</el-form-item>
 								</div>
 								<div class="time_flex">
-									<el-form-item label="Rate  (Please set the percentage you would like to earn from registration fee) " :required="true"> 
+									<el-form-item label="Rate  (Please set the percentage you would like to earn from registration fee) " :required="true">
 										<el-input v-model="percentage"  min="10" max="60" type="number" style="width: 360px;"></el-input>
 									</el-form-item>
 								</div>
@@ -205,9 +205,9 @@
 											<img  v-else src="../../assets/images/xzs.png" alt="" @click="prizeAmount_check = false">
 										</div>
 									</div>
-								</el-form-item> 
+								</el-form-item>
 								<div class="time_flex" v-if="prizeAmount_check">
-									<el-form-item label="Prize Amount" > 
+									<el-form-item label="Prize Amount" >
 										<el-input v-model="dataForm.prizeAmount" type="number" min="0" style="width: 360px;"></el-input>
 									</el-form-item>
 								</div>
@@ -244,7 +244,7 @@
 														<div class="team_logo">
 															<el-image
 															style="width: 100px; height: 100px; border-radius: 50%;"
-															:src="HOST + item.teamLogo" 
+															:src="HOST + item.teamLogo"
 															fit="fill"></el-image>
 															<!-- <img alt=""> -->
 														</div>
@@ -252,7 +252,7 @@
 															<div class="team_title">{{item.teamName}}</div>
 															<div class="team_subtit">{{item.gameName}}</div>
 														</div>
-														
+
 													</div>
 													<div class="team_right">
 														<div class="team_info" v-if="item.aboutTeam != '' && item.aboutTeam != null && item.aboutTeam != undefined">{{item.aboutTeam}}</div>
@@ -335,12 +335,13 @@
 		data() {
 			return {
 				pickerOptions0: {
-					// selectableRange:(()=>{
-					// 　　let data=new Date();
-					// 		let hour=data.getHours();
-					// 		let minute=data.getMinutes();
-					// 		let second=data.getSeconds();
-					// 		return [`${hour}:${minute}:${second} - 23:59:59`]
+					// selectableRange:((e)=>{
+					//   console.log(e, 1111111)
+					// // 　　let data=new Date();
+					// // 		let hour=data.getHours();
+					// // 		let minute=data.getMinutes();
+					// // 		let second=data.getSeconds();
+					// // 		return [`${hour}:${minute}:${second} - 23:59:59`]
 					// })(),
 					disabledDate(time) {
 						// return time.getTime() < Date.now()-1 * 24 * 3600 * 1000
@@ -356,7 +357,7 @@
 						return time.getTime() < this.dataForm.startTime || time.getTime() < Date.now();
 
 					}
-				}, 
+				},
 				add_status:false,
 				active:1, //步骤条切换
 				dataForm: {
@@ -438,7 +439,7 @@
 		},
 		mounted() {
 			this.gameList();
-			this.getTeam(); 
+			this.getTeam();
 			if (this.$route.query.predictId != null && this.$route.query.predictId != '' && this.$route.query.predictId != undefined) {
 				// this.handleInfo(this.$route.query.id);
 				this.predictId = this.$route.query.predictId
@@ -471,9 +472,9 @@
 			del_addTeam(andex,atem){
 				let arr = []
 				arr = this.show_add_team
-				
+
 				arr.splice(andex,1)
-				this.show_add_team = arr				
+				this.show_add_team = arr
 			},
 			//新增竞猜队伍
 			addTeam_list(index,andex_num){
@@ -537,7 +538,10 @@
 				}
 			},
 			//开始时间改变时的处理
-			handleTime(){
+			handleTime(val){
+        this.dataForm.startTime = val
+
+        return
 				var startAt = new Date(this.dataForm.startTime) * 1000 / 1000
 				var endAt = new Date(this.dataForm.endTime) * 1000 / 1000
 				//当开始时间比现在的时间早时
@@ -575,7 +579,10 @@
 				}
 			},
 			//结束时间改变时的处理
-			handleEndTime(){
+			handleEndTime(val){
+        this.dataForm.endTime = val
+
+        return
 				var startAt = new Date(this.dataForm.startTime) * 1000 / 1000
 				var endAt = new Date(this.dataForm.endTime) * 1000 / 1000
 				if(this.dataForm.startTime != '' && this.dataForm.startTime != null && this.dataForm.startTime != undefined){
@@ -597,7 +604,7 @@
 					if(endAt < Date.now()){
 						// 结束时间=现在的时间
 						this.dataForm.endTime = new Date()
-						
+
 					}
 
 				}
@@ -675,7 +682,7 @@
 							// }
 							if(this.show_team_list[s].teamName == this.team_popup[p].teamName && this.show_team_list[s].teamLogo == this.team_popup[p].teamLogo && this.show_team_list[s].teamDescription == this.team_popup[p].aboutTeam){
 								this.team_popup[p].choose_status = true
-								
+
 							}
 						}
 					}
@@ -769,7 +776,7 @@
 				this.add_status = false
 
 			},
-			// 删除选中的战队 
+			// 删除选中的战队
 			del_team(index,item){
 				let that = this;
 				let {
@@ -827,7 +834,7 @@
 						message: res.message
 					});
 				}
-				
+
 			},
 			// 上传中
 			beforeAvatarUpload(file) {
@@ -838,7 +845,7 @@
 					customClass: "animated fadeIn",
 					text: "上传中"
 				});
-			
+
 				return isJPG && isLt2M;
 			},
 			// 游戏列表
@@ -857,13 +864,13 @@
 				let that = this
 				that.dataForm.id = that.predictId
 				that.dataForm.commissionRate = that.percentage / 100
-				if(that.show_team_list.length == 0){
-					that.dataForm.predictTeams = that.show_add_team
-				}else if(that.show_add_team.length == 0){
-					that.dataForm.predictTeams = that.show_team_list
-				}else{
-					that.dataForm.predictTeams = that.dataForm.predictTeams.concat(that.show_add_team)
-				}
+        if(that.show_team_list.length == 0){
+          that.dataForm.predictTeams = that.show_add_team
+        }else if(that.show_add_team.length == 0){
+          that.dataForm.predictTeams = that.show_add_team
+        } else {
+          that.dataForm.predictTeams = that.show_team_list.concat(that.show_add_team)
+        }
 				// that.dataForm.predictTeams = that.dataForm.predictTeams.concat(that.show_add_team)
 				// console.log(that.show_add_team ,"show_add_team ，更新")
 				// console.log(that.dataForm.predictTeams ,"dataForm.predictTeams ，更新")
@@ -874,59 +881,67 @@
 					  message: '请上传竞猜海报！',
 					  type: 'warning'
 					})
+          return false
 				}else if(that.dataForm.title == ''){
 					that.$message({
 					  message: '竞猜标题不能为空！',
 					  type: 'warning'
 					})
+          return false
 				}else if(that.dataForm.gameId == '' || that.dataForm.gameId == null){
 					that.$message({
 					  message: '请选择游戏类型！',
 					  type: 'warning'
 					})
+          return false
 				}else if(that.dataForm.startTime == '' || that.dataForm.startTime == null){
 					that.$message({
 					  message: '请选择竞猜开始时间！',
 					  type: 'warning'
 					})
+          return false
 				}else if(that.dataForm.endTime == '' || that.dataForm.endTime == null){
 					that.$message({
 					  message: '请选择竞猜结束时间！',
 					  type: 'warning'
 					})
+          return false
 				}else if(that.dataForm.termsAndCondition == '' || that.dataForm.termsAndCondition == null){
 					that.$message({
 					  message: '竞猜规则不能为空！',
 					  type: 'warning'
 					})
+          return false
 				}else if(that.dataForm.registrationFee < 200){
 					that.$message({
 					  message: '参与竞猜的费用不得低于200！',
 					  type: 'warning'
 					})
+          return false
 				}else if(that.percentage < 10 || that.percentage > 60){
 					that.$message({
 					  message: 'Rate只能在10与60之间！',
 					  type: 'warning'
 					})
+          return false
 				}else if(that.show_team_list.length < 1 && that.show_add_team.length < 1){
 					that.$message({
 					  message: '请选择战队或者请添加临时队伍',
 					  type: 'warning'
 					})
-					// return false
+					return false
 				}else if(that.dataForm.predictTeamCount >= that.dataForm.predictTeams.length){
 					that.$message({
 					  message: '可选择的战队数不得少于要预测的战队数',
 					  type: 'warning'
 					})
-					// return false
+					return false
 				}else if(!(/^[1-9]\d*$/.test(this.dataForm.predictTeamCount))) {
 					this.$message({
 						type: 'warning',
 						message: '您输入的不是数字，请输入数字！'
 					});
-					// return false
+					return false
 				}else{
 					for (let i = 0; i < that.team_list.length; i++) {
 						that.teamidy.push(that.team_list[i].teamId)
@@ -942,19 +957,22 @@
 						that.$router.go(-1)
 					})
 				}
-				
+
 			},
 			// index 3 保存  0取消
 			next_step(index){
 				let that = this;
 				that.dataForm.commissionRate = that.percentage / 100
-				if(that.show_team_list.length == 0){
-					that.dataForm.predictTeams = that.show_add_team
-				}else if(that.show_add_team.length == 0){
-					that.dataForm.predictTeams = that.show_add_team
-				}else{
-					that.dataForm.predictTeams = that.dataForm.predictTeams.concat(that.show_add_team)
-				}
+        console.log(index, that.active)
+        if (index != 3) {
+          if(that.show_team_list.length == 0){
+            that.dataForm.predictTeams = that.show_add_team
+          }else if(that.show_add_team.length == 0){
+            that.dataForm.predictTeams = that.show_add_team
+          }
+        } else {
+          that.dataForm.predictTeams = that.show_team_list.concat(that.show_add_team)
+        }
 				console.log(that.dataForm.predictTeams,'that.dataForm.predictTeams')
 				console.log(that.dataForm.predictTeams.length,"竞猜长度")
 				if(index == 2){
@@ -963,49 +981,49 @@
 						  message: '请上传竞猜海报！',
 						  type: 'warning'
 						})
-						return 
+						return
 					}
 					if(that.dataForm.title == ''){
 						that.$message({
 						  message: '竞猜标题不能为空！',
 						  type: 'warning'
 						})
-						return 
+						return
 					}
 					if(that.dataForm.gameId == '' || that.dataForm.gameId == null){
 						that.$message({
 						  message: '请选择游戏类型！',
 						  type: 'warning'
 						})
-						return 
+						return
 					}
 					if(that.dataForm.startTime == '' || that.dataForm.startTime == null){
 						that.$message({
 						  message: '请选择竞猜开始时间！',
 						  type: 'warning'
 						})
-						return 
+						return
 					}
 					if(that.dataForm.endTime == '' || that.dataForm.endTime == null){
 						that.$message({
 						  message: '请选择竞猜结束时间！',
 						  type: 'warning'
 						})
-						return 
+						return
 					}
 					if(that.dataForm.termsAndCondition == '' || that.dataForm.termsAndCondition == null){
 						that.$message({
 						  message: '竞猜规则不能为空！',
 						  type: 'warning'
 						})
-						return 
+						return
 					}
 					if(that.dataForm.registrationFee < 200){
 						that.$message({
 						  message: '参与竞猜的费用不得低于200！',
 						  type: 'warning'
 						})
-						return 
+						return
 					}
 					if(that.percentage < 10 || that.percentage > 60){
 						that.$message({
@@ -1061,30 +1079,32 @@
 						  message: '竞猜数量不能为空',
 						  type: 'warning'
 						})
+
+            return false
 					}else if(that.show_team_list.length < 1 && that.show_add_team.length < 1){
 						that.$message({
 						  message: '请选择战队或者请添加临时队伍',
 						  type: 'warning'
 						})
-						// return false
+						return false
 					}else if(that.dataForm.predictTeamCount >= that.dataForm.predictTeams.length){
 						that.$message({
 						  message: '可选择的战队数不得少于要预测的战队数',
 						  type: 'warning'
 						})
-						// return false
+						return false
 					}else if(!(/^[1-9]\d*$/.test(that.dataForm.predictTeamCount))) {
 						that.$message({
 							type: 'warning',
 							message: '您输入的不是数字，请输入数字！'
 						});
-						// return false
+						return false
 					}else{
 						for (let i = 0; i < that.team_list.length; i++) {
 							that.teamidy.push(that.team_list[i].teamId)
 						}
 						// that.dataForm.teamIds = that.teamidy;
-						
+
 						predictCreate(that.dataForm).then(res => {
 							that.$message({
 								type: 'success',
@@ -1093,8 +1113,8 @@
 							that.$router.go(-1)
 						})
 					}
-					
-					
+
+
 				}
 				if(index != 3){
 					that.active = index
@@ -1125,17 +1145,17 @@
 		border: 1px solid #ffffff;
 		color: #FFFFFF;
 	}
-	
+
 	/deep/ .el-select .el-input .el-input__inner:focus {
 		color: #FFFFFF;
 	}
-	
+
 	/deep/ .el-select-dropdown {
 		background-color: #33384B;
 		border: 1px solid rgba(255,255,255,0.2);
 		color: #FFFFFF;
 	}
-	
+
 	//修改单个的选项的样式
 	/deep/ .el-select-dropdown__item {
 		background-color: transparent;
@@ -1256,7 +1276,7 @@
 								border: none;
 								padding-left: 35px;
 								color: #fff;
-								
+
 							}
 							.btn{
 								width: 60px;
@@ -1273,7 +1293,7 @@
 							}
 						}
 					}
-					
+
 				}
 			}
 			.content_block{
@@ -1304,7 +1324,7 @@
 								height: 88px;
 								// border-radius: 44px;
 								border-radius: 50%;
-								
+
 							}
 							.team_info{
 								margin-left: 20px;
@@ -1331,7 +1351,7 @@
 							}
 						}
 					}
-					
+
 				}
 				#text_area::-webkit-scrollbar {
 					/*滚动条整体样式*/
@@ -1412,7 +1432,7 @@
 			left: 0;
 			top: 0;
 			z-index: 88;
-			
+
 		}
 		.mark_check_container{
 			// position: absolute;
@@ -1464,7 +1484,7 @@
 								display: flex;
 								align-items: center;
 								margin-bottom: 31px;
-						
+
 								.logo_upadte {
 									width: 146px;
 									height: 146px;
@@ -1475,7 +1495,7 @@
 									justify-content: center;
 									margin-right: 18px;
 									font-family:'Roboto-Regular';
-									
+
 									.avatar_w{
 										width: 31px;
 										height: auto;
@@ -1487,7 +1507,7 @@
 										// border-radius: 50%;
 									}
 								}
-						
+
 								.logo_info {
 									color: #727272;
 									font-size: 20px;
@@ -1504,7 +1524,7 @@
 									margin: 10px 0 10px 0;
 									text-align: left;
 								}
-						
+
 								.form_input_block {
 									width: 98%;
 									height: 59px;
@@ -1526,7 +1546,7 @@
 										font-family:'Roboto-Regular';
 									}
 								}
-						
+
 								.team_input_block {
 									width: 98%;
 									height: 59px;
@@ -1548,7 +1568,7 @@
 										font-size: 20px;
 										font-family:'Roboto-Regular';
 									}
-						
+
 									.limit_num {
 										position: absolute;
 										right: 30px;
@@ -1557,7 +1577,7 @@
 										font-family:'Roboto-Regular';
 									}
 								}
-						
+
 								.area_input_block {
 									width: 98%;
 									display: flex;
@@ -1581,7 +1601,7 @@
 										resize: none;
 										font-family:'Roboto-Regular';
 									}
-						
+
 									.limit_num {
 										position: absolute;
 										right: 30px;
@@ -1591,15 +1611,15 @@
 										font-family:'Roboto-Regular';
 									}
 								}
-						
+
 							}
-						
+
 							.creat_team_btom {
 								margin-top: 179px;
 								margin: 90px 0 97px 0;
 								display: flex;
 								align-items: center;
-						
+
 								.invite_button {
 									width: 163px;
 									height: 58px;
@@ -1613,7 +1633,7 @@
 									border-radius: 25px;
 									font-family:'Roboto-Regular';
 								}
-						
+
 								.skip_button {
 									width: 163px;
 									height: 56px;
@@ -1628,11 +1648,11 @@
 								}
 							}
 						}
-								
-						
+
+
 					}
 				}
-				
+
 			}
 			.mark_my_foot{
 				width: 100%;
@@ -1688,9 +1708,9 @@
 		}
 		/deep/.el-form-item {
 			margin-bottom: 20px;
-			
+
 		}
-		
+
 		.predict_container {
 			.predict_content {
 				.predict_head {
@@ -1806,7 +1826,7 @@
 							border-radius: 2px;
 							border: 1px solid #FFFFFF;
 						}
-						
+
 						.poster_flex{
 							display: flex;
 							align-items: center;
@@ -1830,7 +1850,7 @@
 									font-size: 14px;
 								}
 							}
-							
+
 							.poster2_img{
 								// 1500 x 326
 								// width: 1500px;
@@ -1864,7 +1884,7 @@
 							.recycle_Img{
 								width: 28px;
 							}
-							
+
 						}
 						.time_flex {
 							display: flex;
@@ -1928,7 +1948,7 @@
 							}
 						}
 					}
-					// 步骤2 
+					// 步骤2
 					.step_active2 {
 						margin-left: 80px;
 						font-family:'Roboto-Regular';
