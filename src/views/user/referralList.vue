@@ -32,13 +32,13 @@
                 <div class="row_col">{{initDate(item.registerTime)}}</div>
 
                 <div class="row_col row_col_2">{{item.fullName}}</div>
-                <div class="row_col text_title">{{item.Identification}}</div>
+                <div class="row_col text_title">{{item.amount}}</div>
 
                 <div class="row_col text_description">
-
+                  {{item.uAmount}}
                 </div>
                 <div class="row_col text_description">
-
+                  {{item.rAmount}}
                 </div>
 
               </div>
