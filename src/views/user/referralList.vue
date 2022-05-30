@@ -18,7 +18,7 @@
           </div>
           <div class="content_table">
             <div class="table_header">
-              <div class="header_col">Date&Time</div>
+              <!-- <div class="header_col">Date&Time</div> -->
               <div class="header_col header_title">Friends referred</div>
               <div class="header_col header_title">Referee top up</div>
               <div class="header_col header_description">Referee received</div>
@@ -29,10 +29,10 @@
                    v-if="list == ''">暂无数据</div>
               <div class="body_row"
                    v-for="(item,index) in list">
-                <div class="row_col">{{initDate(item.registerTime)}}</div>
+                <!-- <div class="row_col">{{initDate(item.registerTime)}}</div> -->
 
                 <div class="row_col row_col_2">{{item.fullName}}</div>
-                <div class="row_col text_title">{{item.amount}}</div>
+                <div class="row_col text_title">{{item.amount}}<span v-if="item.amount"> coins</span></div>
 
                 <div class="row_col text_description">
                   {{item.uAmount}}
@@ -48,7 +48,7 @@
       </div>
       <!-- 分页 -->
       <div class="rank_pagination">
-        <pagination :total="total_count"
+        <pagination :total="20"
                     v-bind:page.sync="listQuery.page"
                     :limit.sync="listQuery.size"
                     @pagination="handlePageChange"
