@@ -48,7 +48,7 @@
       </div>
       <!-- 分页 -->
       <div class="rank_pagination">
-        <pagination :total="20"
+        <pagination :total="total_count"
                     v-bind:page.sync="listQuery.page"
                     :limit.sync="listQuery.size"
                     @pagination="handlePageChange"
